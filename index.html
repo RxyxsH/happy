@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños!</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #3137b1;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 50px;
+            color: #ff0066;
+            text-shadow: 2px 2px 5px #990033;
+        }
+        .balloons {
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            animation: float 5s linear infinite;
+        }
+        .balloon {
+            width: 50px;
+            height: 70px;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+        }
+        .balloon::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            width: 2px;
+            height: 50px;
+            background-color: gray;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-300px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Feliz Cumpleaños Mmahuevo! 🎂🎉</h1>
+    <div class="balloons">
+        <div class="balloon" style="background-color: red;"></div>
+        <div class="balloon" style="background-color: blue;"></div>
+        <div class="balloon" style="background-color: yellow;"></div>
+        <div class="balloon" style="background-color: green;"></div>
+    </div>
+</body>
+</html>
